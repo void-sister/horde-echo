@@ -4,10 +4,32 @@ namespace App\Models;
 
 use App\Enums\ProjectStatus;
 use Database\Factories\ProjectFactory;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Support\Carbon;
 
+/**
+ * App\Models\Project
+ *
+ * @property int $id
+ * @property int|null $client_id
+ * @property int|null $booking_id
+ * @property string $title
+ * @property string|null $description
+ * @property string|null $notes
+ * @property string $start_date
+ * @property string $end_date
+ * @property string $release_date
+ * @property string $status
+ * @property Carbon|null $created_at
+ * @property Carbon|null $updated_at
+ * @property-read Booking|null $booking
+ * @property-read Client|null $client
+ * @method static Builder|Project newModelQuery()
+ *
+ */
 class Project extends Model
 {
     /** @use HasFactory<ProjectFactory> */

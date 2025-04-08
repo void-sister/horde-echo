@@ -20,7 +20,7 @@ class BookingFactory extends Factory
     public function definition(): array
     {
         return [
-            'client_id' => Client::factory(),
+            'client_id' => Client::inRandomOrder()->first()?->id,
             'additional_info' => fake()->optional()->paragraph,
             'status' => fake()->randomElement(BookingStatus::cases())->value,
         ];

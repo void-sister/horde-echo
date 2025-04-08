@@ -16,7 +16,7 @@ class DatabaseSeeder extends Seeder
             BookingSeeder::class,
             ProjectSeeder::class,
             CalendarEntrySeeder::class,
-            FileSeeder::class,
+            PortfolioEntitySeeder::class,
         ]);
     }
 }

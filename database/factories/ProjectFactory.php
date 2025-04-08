@@ -22,9 +22,9 @@ class ProjectFactory extends Factory
         return [
             'client_id' => Client::inRandomOrder()->first()?->id,
             'booking_id' => null,
-            'title' => $this->faker->sentence,
-            'description' => $this->faker->paragraph,
-            'notes' => $this->faker->text,
+            'title' => fake()->sentence,
+            'description' => fake()->paragraph,
+            'notes' => fake()->text,
             'start_date' => null,
             'end_date' => null,
             'release_date' => null,
